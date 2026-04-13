@@ -1,0 +1,5 @@
+
+platforma:win32
+arxitektura:x64 
+umumiKesh:6316908544 MB
+boshKesh:2246426624 MB

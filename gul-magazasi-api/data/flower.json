@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name": "Qızılgül",
+        "description": "Qızılgül, sevginin və gözəlliyin simvolu olan ən məşhur çiçəklərdən biridir.",
+        "price": 5.00,
+        "image": "https://qebulol.az/wp-content/uploads/2025/08/qizilgul11.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Lalə",
+        "description": "Lalələr, baharın simvolu olan canlı və rəngarəng çiçəklərdir.",
+        "price": 3.00,
+        "image": "https://gulsifarisi.az/uploads/thumb-d46e9f83394ba86498ce1c39e586f93e.webp"
+    },
+    {
+        "id": 3,
+        "name": "Orxideya",
+        "description": "Orxideyalar, egzotik və zərif çiçəklərdir.Əsasən dekorativ məqsədlər üçün yetişdirilir.",
+        "price": 35.00,
+        "image": "https://www.rosebellaflowers.com/idea/ol/71/myassets/products/164/4-dalli-beyaz-orkide.png?revision=1746018740"
+    }
+]

@@ -1,0 +1,59 @@
+.payment-grid {
+  max-width: 900px;
+  margin: 40px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) { .payment-grid { grid-template-columns: 1fr; } }
+
+.form-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+  text-align: left;
+}
+
+.input-block {
+  margin-bottom: 18px;
+}
+
+.input-block label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.split-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.pay-action-btn {
+  width: 100%;
+  background-color: #DE3B6A;
+  color: #ffffff;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.pay-action-btn:disabled {
+  background-color: #E5E7EB;
+  cursor: not-allowed;
+}

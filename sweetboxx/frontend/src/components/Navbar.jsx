@@ -23,7 +23,7 @@ const Navbar = () => {
 
       {user ? (
         <span className="nav-user-profile" onClick={() => navigate('/profile')}>
-          👤 {user.fullName}
+           {user.fullName}
         </span>
       ) : (
         <button className="nav-btn" onClick={() => navigate('/login')}>Giriş / Qeydiyyat</button>

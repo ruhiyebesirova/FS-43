@@ -1,4 +1,3 @@
-// backend/config/db.js
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
@@ -11,5 +10,5 @@ const connectDB = async () => {
   }
 };
 
-// BU SƏTİR MÜTLƏQDİR! Funksiyanı kənara ötürən hissə budur:
+
 module.exports = connectDB;

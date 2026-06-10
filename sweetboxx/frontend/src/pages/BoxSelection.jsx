@@ -6,7 +6,7 @@ import BoxCard from '../../components/BoxCard';
 import './BoxSelection.css';
 
 const dummyBoxes = [
-  { id: 1, name: 'Klassik Qutu', image: 'https://via.placeholder.com/150/FFFDFD/DE3B6A?text=Box1' },
+  { id: 1, name: 'Klassik Qutu', image: 'https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=500' },
   { id: 2, name: 'Romantik Qutu', image: 'https://via.placeholder.com/150/FFFDFD/DE3B6A?text=Box2' },
   { id: 3, name: 'Lüks Qutu', image: 'https://via.placeholder.com/150/FFFDFD/DE3B6A?text=Box3' },
   { id: 4, name: 'Minimal Qutu', image: 'https://via.placeholder.com/150/FFFDFD/DE3B6A?text=Box4' },

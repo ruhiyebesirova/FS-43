@@ -24,7 +24,7 @@ const Home = () => {
           <button className="start-btn" onClick={handleStartProcess}>Başla</button>
         </div>
         <div className="hero-vector">
-          <img src="https://images.unsplash.com/photo-1549417229-aa67d3263c09?q=80&w=350" alt="SweetBox Cover" />
+          <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcRdu7FwPUCNvoH7sLmb-LnhvXZ2hMuY8GaJwjDrW0w2F9m9ByKMHaTFIoaDN37fnGSwUuy0eAaANohWOnQ" />
         </div>
       </div>
     </div>

@@ -1,25 +1,13 @@
 const express = require('express');
 const router = express.Router();
-const Order = require('../models/Order');
 const nodemailer = require('nodemailer');
 
-// Sifariş yaratmaq və Mail göndərmək API-ı
 router.post('/send-box', async (req, res) => {
   try {
     const { senderEmail, receiverEmail, selectedBox, selectedSweets, message, totalPrice } = req.body;
 
-    // 1. Məlumatları MongoDB Atlas-a qeyd edirik
-    const newOrder = new Order({
-      senderEmail,
-      receiverEmail,
-      selectedBox,
-      selectedSweets,
-      message,
-      totalPrice
-    });
-    const savedOrder = await newOrder.save();
+    console.log("🎁 Yeni Sifariş Gəldi:", { senderEmail, receiverEmail, totalPrice });
 
-    // 2. Nodemailer ilə Real Mail Göndərilməsi
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
@@ -28,8 +16,7 @@ router.post('/send-box', async (req, res) => {
       }
     });
 
-    // Şirniyyatların siyahısını HTML formata salırıq
-    const sweetsList = selectedSweets.map(s => `<li>${s.name} (${s.weight || 'Ölçü qeyd edilməyib'})</li>`).join('');
+    const sweetsList = selectedSweets.map(s => `<li>${s.name}</li>`).join('');
 
     const mailOptions = {
       from: process.env.EMAIL_USER,
@@ -38,20 +25,13 @@ router.post('/send-box', async (req, res) => {
       html: `
         <div style="font-family: Arial, sans-serif; padding: 20px; border: 2px solid #DE3B6A; border-radius: 15px; max-width: 500px; margin: 0 auto;">
           <h2 style="color: #DE3B6A; text-align: center;">Sürpriz Hədiyyə! 🎉</h2>
-          <p><strong>${senderEmail}</strong> adlı istifadəçi sizə özəl olaraq <strong>${selectedBox.name}</strong> hazırladı.</p>
-          
+          <p><strong>${senderEmail}</strong> adlı istifadəçi sizə özəl olaraq xüsusi bir qutu hazırladı.</p>
           <div style="background-color: #FFF5F5; padding: 15px; border-radius: 10px; margin: 15px 0;">
             <p style="margin: 0; font-style: italic; color: #555;">" ${message} "</p>
           </div>
-
-          <h4 style="color: #2B2B2B; margin-bottom: 5px;">Qutunun içindəkilər:</h4>
-          <ul style="padding-left: 20px; color: #4B5563;">
-            ${sweetsList}
-          </ul>
-
-          <p style="font-size: 11px; color: #9CA3AF; text-align: center; margin-top: 25px;">
-            SweetBox virtual çatdırılma platforması vasitəsilə göndərilmişdir.
-          </p>
+          <h4>Qutunun içindəkilər:</h4>
+          <ul>${sweetsList}</ul>
+          <p><strong>Ümumi Qiymət:</strong> ${totalPrice} AZN</p>
         </div>
       `
     };
@@ -60,8 +40,7 @@ router.post('/send-box', async (req, res) => {
 
     res.status(201).json({ 
       success: true, 
-      message: 'Məlumatlar bazaya yazıldı və real mail uğurla göndərildi!',
-      data: savedOrder 
+      message: 'Real mail uğurla göndərildi!' 
     });
 
   } catch (error) {
@@ -70,5 +49,4 @@ router.post('/send-box', async (req, res) => {
   }
 });
 
-// EXPRESS-Ə BU ROUTER-İ İXRAZ EDİRİK
 module.exports = router;

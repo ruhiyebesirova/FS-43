@@ -1,4 +1,3 @@
-// src/context/AppContext.jsx
 import React, { createContext, useContext, useState } from 'react';
 
 const AppContext = createContext();

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../context/AppContext';
+//import { useGlobalContext } from '../context/AppContext';
 
 const Success = () => {
   const navigate = useNavigate();
-  const { setSelectedBox, setSelectedSweets } = useGlobalContext();
+  const { setSelectedBox, setSelectedSweets } = useContext(); // useGlobalContext() əvəzinə useContext() istifadə edin
 
   const handleCleanUp = () => {
     setSelectedBox(null);

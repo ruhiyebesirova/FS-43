@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../context/AppContext';
-import Stepper from '../../components/Stepper';
+//import { useGlobalContext } from '../context/AppContext';
+//import Stepper from '../../components/Stepper';//
 import './Payment.css';
 
 const Payment = () => {
-  const { totalPrice } = useGlobalContext();
+  //const { totalPrice } = useGlobalContext();
   const navigate = useNavigate();
 
   const [card, setCard] = useState({ code: '', expiry: '', cvv: '' });
@@ -22,7 +22,7 @@ const Payment = () => {
 
   return (
     <div>
-      <Stepper currentStep={3} />
+      //import Stepper from '../../components/Stepper';//
       <div className="payment-grid">
         <form className="form-card" onSubmit={handlePaymentSubmit}>
           <h3 style={{marginBottom:'20px', fontWeight:'700'}}>Kart Məlumatları</h3>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Stepper from '../../components/Stepper';
+//import Stepper from '../../components'//
 import './Payment.css';
 
 const Message = () => {
@@ -18,7 +18,7 @@ const Message = () => {
 
   return (
     <div>
-      <Stepper currentStep={4} />
+     // <Stepper currentStep={4} />
       <div style={{maxWidth:'480px', margin:'40px auto'}} className="form-card">
         <h3 style={{fontWeight:'700', marginBottom:'6px', textAlign:'center'}}>Məlumatları doldurun</h3>
         <p style={{fontSize:'12px', color:'#9CA3AF', textAlign:'center', marginBottom:'24px'}}>Hər iki inputun doldurulması məcburidir.</p>

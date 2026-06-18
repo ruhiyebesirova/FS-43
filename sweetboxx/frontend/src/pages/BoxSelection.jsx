@@ -1,8 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../context/AppContext';
-import Stepper from '../../components/Stepper';
-import BoxCard from '../../components/BoxCard';
+//import { useGlobalContext } from '../context/AppContext';
+//import Stepper from '../../components/Stepper';//
+//import BoxCard from '../../components/BoxCard';
 import './BoxSelection.css';
 
 const dummyBoxes = [
@@ -16,12 +16,12 @@ const dummyBoxes = [
 ];
 
 const BoxSelection = () => {
-  const { selectedBox, setSelectedBox } = useGlobalContext();
+  //const { selectedBox, setSelectedBox } = useGlobalContext();
   const navigate = useNavigate();
 
   return (
     <div>
-      <Stepper currentStep={1} />
+      //import Stepper from '../../components/Stepper';//
       <div className="flow-page">
         <h2 className="flow-title">Qutu secin</h2>
         <p className="flow-subtitle">Hansi qutunun uzerine gelirsinizse o hover olacaq</p>
@@ -38,7 +38,7 @@ const BoxSelection = () => {
         </div>
 
         <div className="bottom-bar">
-          <span className="notice-txt">⚠️ Yalnız 1 qutu seçmək hüququnuz var.</span>
+          <span className="notice-txt">Yalnız 1 qutu seçmək hüququnuz var.</span>
           <button 
             className="flow-next-btn"
             disabled={!selectedBox}

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../context/AppContext';
+//import { useGlobalContext } from '../context/AppContext';
 
 const Login = () => {
-  const { setUser } = useGlobalContext();
+  const { setUser } = useContext(); 
   const navigate = useNavigate();
 
  

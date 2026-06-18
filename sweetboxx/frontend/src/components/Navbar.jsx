@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../src/context/AppContext';
+import { useAppContext } from '../context/AppContext.jsx';
 import { RiGiftLine } from 'react-icons/ri';
-import './Navbar.css';
 
 const Navbar = () => {
-  const { user } = useGlobalContext();
+  const { user } = useAppContext();
   const navigate = useNavigate();
 
   return (
@@ -23,10 +22,12 @@ const Navbar = () => {
 
       {user ? (
         <span className="nav-user-profile" onClick={() => navigate('/profile')}>
-           {user.fullName}
+          {user.fullName}
         </span>
       ) : (
-        <button className="nav-btn" onClick={() => navigate('/login')}>Giriş / Qeydiyyat</button>
+        <button className="nav-btn" onClick={() => navigate('/login')}>
+          Giriş / Qeydiyyat
+        </button>
       )}
     </nav>
   );

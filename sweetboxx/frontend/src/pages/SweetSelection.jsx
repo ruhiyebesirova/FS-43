@@ -1,9 +1,9 @@
 import React from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../context/AppContext';
-import Stepper from '../../components/Stepper';
-import SweetCard from '../../components/SweetCard';
+//import { useGlobalContext } from '../context/AppContext';
+//import Stepper from '../../components/Stepper';//
+//import SweetSelection from '../../components/SweetCard';
 import './BoxSelection.css';
 
 const dummySweets = [
@@ -20,7 +20,7 @@ const dummySweets = [
 ];
 
 const SweetSelection = () => {
-  const { selectedSweets, toggleSweet, hasPaidSweets } = useGlobalContext();
+  //const { selectedSweets, toggleSweet, hasPaidSweets } = useGlobalContext();
   const navigate = useNavigate();
 
   const canProceed = selectedSweets.length >= 2 && selectedSweets.length <= 10;

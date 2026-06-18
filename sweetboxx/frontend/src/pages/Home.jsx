@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useGlobalContext } from '../context/AppContext';
+//import { useGlobalContext } from '../context/AppContext';
 import './Home.css';
 
 const Home = () => {
-  const { user } = useGlobalContext();
+  //const { user } = useGlobalContext();
   const navigate = useNavigate();
 
   const handleStartProcess = () => {

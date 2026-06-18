@@ -1,8 +1,8 @@
 import React from 'react';
-import { useGlobalContext } from '../context/AppContext';
+//import { useGlobalContext } from '../context/AppContext';
 
 const Profile = () => {
-  const { user } = useGlobalContext();
+  //const { user } = useGlobalContext();
 
   return (
     <div style={{maxWidth:'600px', margin:'60px auto', padding:'30px', backgroundColor:'#fff', borderRadius:'24px'}}>
